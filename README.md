@@ -1,40 +1,38 @@
-<h1 align="center">ctu-thesis</h1>
+<h1 align="center">cvut-thesis</h1>
 
 <p align="center">
-  <strong>A clean Typst thesis template for CTU in Prague.</strong><br>
+  <strong>A clean Typst thesis template for ČVUT (CTU in Prague).</strong><br>
 </p>
 
 <p align="center">
-  <!--<img alt="Package: @preview/ctu-thesis" src="https://img.shields.io/badge/package-@preview%2Fctu--thesis-239dad?logo=typst&logoColor=white">-->
+  <a href="https://typst.app/universe/package/cvut-thesis"><img alt="Package: @preview/cvut-thesis" src="https://img.shields.io/badge/package-@preview%2Fcvut--thesis-239dad?logo=typst&logoColor=white"></a>
   <img alt="Typst 0.11+" src="https://img.shields.io/badge/typst-0.11%2B-239dad?logo=typst&logoColor=white">
-  <img alt="Status: WIP" src="https://img.shields.io/badge/status-WIP-ffb000">
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/firu11/cvut-thesis/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
 <p align="center">
-  <img src="thumbnail.png" alt="Preview of the ctu-thesis Typst template" width="50%">
+  <img src="https://raw.githubusercontent.com/firu11/cvut-thesis/main/thumbnail.png" alt="Preview of the cvut-thesis Typst template" width="50%">
 </p>
 
-`ctu-thesis` is an unofficial Typst template for qualification theses at the Czech Technical University in Prague. It currently focuses on the Faculty of Electrical Engineering (`fel-thesis`).
+`cvut-thesis` is an unofficial Typst template for qualification theses at the Czech Technical University in Prague. It currently focuses on the Faculty of Electrical Engineering (`fel-thesis`).
 
-> [!IMPORTANT]
-> This template is still WIP. Always verify the final PDF against your faculty's current thesis requirements before submitting.
+> **Note:** This template is unofficial and not endorsed by ČVUT. Always verify the final PDF against your faculty's current thesis requirements before submitting.
 
 ## Features
 - Nice cover page with logo, study branch, thesis type, author, supervisor/details grid, and submission date.
+- Declaration of authorship page (in Czech) with a signature line.
 - Czech and English abstract pages with localized keywords.
 - Styled table of contents via `fel-toc`.
 - Sensible thesis layout: 11pt serif text, justified paragraphs, numbered headings, first-line indentation, and clean figures/code-blocks.
 - Optional print binding gutter with wider inside margin.
-- Template project with CTU logo and ISO690-numeric citation style.
+- Template project with ČVUT logo and ISO690-numeric citation style.
 
 ## Quick start
-> [!IMPORTANT]
-> This package isn't published to the Typst Universe yet, so it can't be imported like this as of this time!
+In the [Typst web app](https://typst.app), click **Start from template** and search for `cvut-thesis`.
 
-Initialize a fresh project with:
+Or initialize a fresh project locally with the Typst CLI:
 ```sh
-typst init @preview/ctu-thesis:0.0.1 my-thesis
+typst init @preview/cvut-thesis:0.0.1 my-thesis
 cd my-thesis
 typst watch main.typ
 ```
@@ -43,7 +41,7 @@ Typst will copy the starter project (from the `template` folder) and keep recomp
 ## Usage
 A minimal thesis starts with a single `show` rule:
 ```typ
-#import "@preview/ctu-thesis:0.0.1": fel-thesis
+#import "@preview/cvut-thesis:0.0.1": fel-thesis
 
 #show: fel-thesis.with(
   title: "Velmi zajímavá studie",
@@ -89,6 +87,7 @@ The bundled starter also includes a bibliography call:
 | `author` | `str` | `"AUTHOR NAME"` | Author name shown on the cover page and in PDF metadata. |
 | `details` | `dictionary` | `()` | Label/value pairs displayed on the cover page, such as supervisor or programme. |
 | `date` | `str` | `"DATE OF SUBMISSION"` | Submission month/year or full date. |
+| `sign-date` | `datetime` | `datetime.today()` | Date shown on the declaration of authorship page. |
 | `abstract-cz` | `content` / `str` | `"ABSTRACT TEXT CZ"` | Czech abstract. |
 | `abstract-en` | `content` / `str` | `"ABSTRACT TEXT EN"` | English abstract. |
 | `keywords-cz` | `array` | `("KEYWORDS", "CZ")` | Czech keywords, joined with commas. |
@@ -103,13 +102,13 @@ The bundled starter also includes a bibliography call:
 ## Exported helpers
 | Helper | Use it for |
 | --- | --- |
-| `fel-thesis` | Full FEL thesis structure: cover, abstracts, table of contents, page numbering, and body. |
+| `fel-thesis` | Full FEL thesis structure: cover, declaration, abstracts, table of contents, page numbering, and body. |
 | `fel-cover` | Standalone FEL-style cover page. |
 | `fel-toc` | Standalone styled table of contents. |
 
 ## Project structure
 ```text
-ctu-thesis/
+cvut-thesis/
 ├─ lib.typ                  # public exports
 ├─ typst.toml               # typst package manifest
 ├─ src/
@@ -129,4 +128,4 @@ ctu-thesis/
 - **Citation Style:** [ISO 690 (Numeric, Brackets, Czech) CSL Style](https://github.com/citation-style-language/styles/blob/master/iso690-numeric-brackets-cs.csl)
 
 ## License
-MIT - see [`LICENSE`](LICENSE).
+MIT - see [`LICENSE`](https://github.com/firu11/cvut-thesis/blob/main/LICENSE).

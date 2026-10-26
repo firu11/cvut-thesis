@@ -1,9 +1,9 @@
 [package]
-name = "ctu-thesis"
+name = "cvut-thesis"
 version = "0.0.1"
 compiler = "0.11.0"
 authors = ["Filip Růžička <https://firu.dev>"]
-repository = "https://github.com/firu11/ctu-thesis"
+repository = "https://github.com/firu11/cvut-thesis"
 license = "MIT"
 description = "A thesis template at ČVUT (CTU in Prague)."
 entrypoint = "lib.typ"

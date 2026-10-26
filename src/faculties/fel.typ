@@ -195,6 +195,7 @@
     // declaration of authorship
     fel-declaration(
       author: author,
+      sign-date: sign-date,
     )
     pagebreak()
 

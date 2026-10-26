@@ -1,4 +1,4 @@
-#import "@preview/ctu-thesis:0.0.1": fel-thesis
+#import "@preview/cvut-thesis:0.0.1": fel-thesis
 
 #show: fel-thesis.with(
   title: "Velmi zajímavá studie",
