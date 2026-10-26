@@ -1,7 +1,7 @@
 <h1 align="center">cvut-thesis</h1>
 
 <p align="center">
-  <strong>A clean Typst thesis template for ČVUT (CTU in Prague).</strong><br>
+  <strong>Unofficial thesis layout for ČVUT (CTU in Prague)</strong><br>
 </p>
 
 <p align="center">
