@@ -10,7 +10,6 @@
   subtitle: "REPORT SUBTITLE",
   author: "AUTHOR NAME",
   details: (),
-  username: "STUDENT USERNAME",
   date: "DATE OF SUBMISSION",
   university: defaults.university,
   branch: "YOUR STUDY BRANCH",
@@ -187,6 +186,7 @@
       author: author,
       details: details,
       date: date,
+      university: university,
       branch: branch,
       logo: logo,
     )
