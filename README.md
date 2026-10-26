@@ -32,7 +32,7 @@ In the [Typst web app](https://typst.app), click **Start from template** and sea
 
 Or initialize a fresh project locally with the Typst CLI:
 ```sh
-typst init @preview/cvut-thesis:0.0.1 my-thesis
+typst init @preview/cvut-thesis:0.1.0 my-thesis
 cd my-thesis
 typst watch main.typ
 ```
@@ -41,7 +41,7 @@ Typst will copy the starter project (from the `template` folder) and keep recomp
 ## Usage
 A minimal thesis starts with a single `show` rule:
 ```typ
-#import "@preview/cvut-thesis:0.0.1": fel-thesis
+#import "@preview/cvut-thesis:0.1.0": fel-thesis
 
 #show: fel-thesis.with(
   title: "Velmi zajímavá studie",
